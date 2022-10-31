@@ -1,0 +1,56 @@
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.inner-cards {
+  background-color: #023047;
+  width: 30%;
+  border-radius: 7px;
+  padding: 20px 30px;
+}
+
+.password{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+}
+
+.password span{
+    background-color: aliceblue;
+    padding: 10px;
+    width: 80%;
+    border-radius: 7px;
+}
+
+.password button{
+    height: 40px;
+    width: 10%;
+    border-radius: 7px;
+    outline: none;
+    transition: 0.5s ease;
+}
+
+.password button i{
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.password button:hover{
+    background-color: #219EBC;
+}
+
+.generate button{
+    width: 100%;
+    height: 40px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+}
