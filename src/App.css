@@ -11,7 +11,7 @@ body{
   
   .inner-cards {
     background-color: #023047;
-    width: 30%;
+    width: 35%;
     border-radius: 7px;
     padding: 20px 30px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
@@ -31,7 +31,7 @@ body{
     width: 80%;
     border-radius: 7px;
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 1.5px;
   }
   
@@ -77,7 +77,7 @@ body{
     align-items: center;
     background-color: #FFB703;
     position: relative;
-    top: 80px;
+    top: 50px;
     width: 15%;
     padding-left: 30px;
     padding-right: 30px;
@@ -88,4 +88,33 @@ body{
     font-size: 22px;
     color: red;
     cursor: pointer;
+}
+
+/* Responsiveness starts here */
+/* medium screens */
+@media (max-width: 991px) {
+  .inner-cards {
+    width: 50%;
+  }
+  .card {
+    margin-top: 350px;
+  }
+}
+
+/* Small Screens */
+@media only screen and (max-width: 480px) {
+  .inner-cards {
+    width: 80%;
+    padding: 20px 20px;
+  }
+  .password button {
+    height: 45px;
+    width: 15%;
+  }
+  .password span {
+    width: 70%;
+  }
+  .inner-pop{
+    width: 50%;
+}
 }

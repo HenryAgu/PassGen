@@ -5,6 +5,9 @@ import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+// For Copy to Clipboard
+import { CopyToClipboard } from "react-copy-to-clipboard";
+
 // hooks
 import { useState, useEffect } from "react";
 function App() {
@@ -19,10 +22,23 @@ function App() {
   // Copy Password
   const copyPasswordHandler = () => {
     setPopUp(true);
+    setPassword("Create Password")
   };
 
   // Generate Password
-  const passwordHandler = () => {};
+  const passwordHandler = () => {
+    const chars =
+      "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    let password = "";
+    const passwordlength = 16;
+
+    // Loop for randomization
+    for (let i = 0; i < passwordlength; i++) {
+      let randomNumber = Math.floor(Math.random() * chars.length);
+      password += chars.substring(randomNumber, randomNumber + 1);
+    }
+    setPassword(password);
+  };
 
   // For AOS animation
   useEffect(() => {
@@ -33,7 +49,11 @@ function App() {
       {/* Pop up section */}
       <div className="pop-up">
         {popUp ? (
-          <div className="inner-pop">
+          <div
+            className="inner-pop"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <p>Copied!</p>
             <i
               class="fa-sharp fa-solid fa-xmark"
@@ -48,7 +68,9 @@ function App() {
           <div className="password">
             <span>{password}</span>
             <button>
-              <i class="fa-solid fa-clone" onClick={copyPasswordHandler}></i>
+              <CopyToClipboard text={password}>
+                <i class="fa-solid fa-clone" onClick={copyPasswordHandler}></i>
+              </CopyToClipboard>
             </button>
           </div>
           <div className="generate">
@@ -56,6 +78,9 @@ function App() {
           </div>
         </div>
       </div>
+      <footer>
+        
+      </footer>
     </>
   );
 }
