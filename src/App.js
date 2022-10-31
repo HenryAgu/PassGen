@@ -22,13 +22,13 @@ function App() {
   // Copy Password
   const copyPasswordHandler = () => {
     setPopUp(true);
-    setPassword("Create Password")
+    setPassword("Create Password");
   };
 
   // Generate Password
   const passwordHandler = () => {
     const chars =
-      "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+      "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz~`!@#$%^&*()-_+={}[]|:'<>.? ";
     let password = "";
     const passwordlength = 16;
 
@@ -78,9 +78,7 @@ function App() {
           </div>
         </div>
       </div>
-      <footer>
-        
-      </footer>
+      <footer>Ⓒ Henry Agu 2022.All rights reserved.</footer>
     </>
   );
 }

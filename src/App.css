@@ -90,6 +90,13 @@ body{
     cursor: pointer;
 }
 
+footer{
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
 /* Responsiveness starts here */
 /* medium screens */
 @media (max-width: 991px) {
